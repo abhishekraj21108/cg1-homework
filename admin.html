@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CG1 Admin Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+header{
+background:#0f172a;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.container{
+max-width:900px;
+margin:30px auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+margin-bottom:20px;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h2>CG1 HOMEWORK Admin</h2>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</header>
+
+<div class="container">
+<div class="card">
+
+<h3>Add Daily Homework</h3>
+
+<input type="text" id="hwTitle" placeholder="Homework Title">
+
+<input type="text" id="hwSubject" placeholder="Subject">
+
+<textarea id="hwDesc" rows="5" placeholder="Homework Description"></textarea>
+
+<button onclick="addHomework()">
+Upload Homework
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Add Announcement</h3>
+
+<input type="text" id="annTitle" placeholder="Announcement Title">
+
+<textarea id="annMsg" rows="5" placeholder="Announcement Message"></textarea>
+
+<button onclick="addAnnouncement()">
+Publish Announcement
+</button>
+
+</div>
